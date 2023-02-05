@@ -1,0 +1,37 @@
+@mixin flex-bc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-ac {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  background-color: #609eaf;
+  position: relative;
+  height: 55vh;
+  border-radius: 25px;
+  padding: 1.5em;
+  padding-bottom: 2em;
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  p {
+    font-size: 0.9em;
+    margin-top: 0.2em;
+    margin-bottom: 2em;
+  }
+  .info {
+    @include flex-bc;
+  }
+  .header-likes {
+    @include flex-ac;
+    font-size: 1.2em;
+    font-weight: 450;
+  }
+}
