@@ -1,13 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.scss";
-import { Fragment } from "react";
-import Navbar from "../components/naviagtions/Navber";
 import HomeLayout from "@/layout/HomeLayout";
 import Header from "@/components/Header";
-
-
+import TopCharts from "@/components/hompage/TopCharts";
+import NewReleases from "@/components/hompage/NewReleases";
 
 export default function Home() {
   return (
@@ -20,56 +15,24 @@ export default function Home() {
       </Head>
 
       <HomeLayout>
-        <main>
-          <Header />
-
-          {/* Top Charts */}
-          <div>
-            <h3>Top Charts</h3>
-            <div>
-              <div>
-                <div>
-                  <div>Image</div>
-                  <div>
-                    <div>Golden age of 80s</div>
-                    <p>Sean Swadder</p>
-                  </div>
-                  <div>2:34:45</div>
-                </div>
-                <div>Like Button</div>
-              </div>
+        <main className="space-y-[3em] lg:space-y-[5em] select-none">
+          <div className="lg:flex justify-between items-start">
+            <Header />
+            <div className=" hidden lg:block lg:w-[38%] space-y-4  ">
+              <h3 className="font-bold text-xl lg:text-2xl ">Top Charts</h3>
+              <TopCharts />
             </div>
           </div>
 
-          {/* New releses */}
-          <div>
-            <h3>New releases</h3>
-            <div className="">
-              <div>
-                <div>Image</div>
-                <div>
-                  <div>Everything black</div>
-                  <p>T pain</p>
-                </div>
-              </div>
-            </div>
+          <div className="lg:hidden space-y-4 ">
+            <h3 className="font-bold text-xl  lg:text-2xl  ">Top Charts</h3>
+            <TopCharts />
+          </div>
+          <div className="space-y-4 ">
+            <h3 className="font-bold text-xl  lg:text-2xl ">New releases</h3>
+            <NewReleases />
           </div>
         </main>
-
-        <footer>
-          <div>
-            <div>Image</div>
-            <div>
-              <div>Season in</div>
-              <div>James</div>
-            </div>
-          </div>
-
-          <div>
-            <div>play icon</div>
-            <div>next icon</div>
-          </div>
-        </footer>
       </HomeLayout>
     </>
   );

@@ -1,3 +1,4 @@
+@import "variables";
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -8,5 +9,21 @@
     color: white;
     display: flex;
     gap: 1em;
+  }
+}
+
+@media (min-width: $md) {
+  .navbar {
+    padding: 0 2em;
+    .icons {
+      width: 12%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+@media (min-width: $lg) {
+  .navbar {
+    display: none;
   }
 }

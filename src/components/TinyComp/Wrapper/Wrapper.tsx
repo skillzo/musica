@@ -5,5 +5,9 @@ interface wrapper {
 }
 
 export default function Wrapper({ children }: wrapper) {
-  return <div className="wrapper">{children}</div>;
+  return (
+    <div className="px-[1.5em] py-[1em] pb-[10em] h-max lg:w-[95%]">
+      {children}
+    </div>
+  );
 }

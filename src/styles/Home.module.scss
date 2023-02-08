@@ -1,3 +1,5 @@
+@import "./variables";
+
 @mixin flex-bc {
   display: flex;
   justify-content: space-between;
@@ -20,18 +22,96 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    h1 {
+      font-size: 2em;
+      font-weight: 600;
+    }
+  }
+  @media (min-width: $md) {
+    .header-text {
+      width: 50%;
+    }
+    .header-text__main {
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h1 {
+        font-size: 3em;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
   }
   p {
-    font-size: 0.9em;
+    width: 90%;
     margin-top: 0.2em;
-    margin-bottom: 2em;
+    margin-bottom: 2.5em;
   }
   .info {
     @include flex-bc;
+  }
+  .vector {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
   .header-likes {
     @include flex-ac;
     font-size: 1.2em;
     font-weight: 450;
+  }
+}
+.vectormd,
+.heroimage {
+  display: none;
+}
+
+@media (min-width: $md) {
+  .header {
+    display: flex;
+  }
+  .vector {
+    display: none;
+  }
+  .vectormd {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 99%;
+    width: 80%;
+    right: 0;
+  }
+  .info {
+    width: 60%;
+  }
+  .heroimage {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 3em;
+    width: max-content;
+    height: 90%;
+    z-index: 10;
+  }
+}
+
+@media (min-width: $lg) {
+  .header {
+    width: 60%;
+    height: 60vh;
+    padding: 1em 3em;
+    .header-text__main {
+      h1 {
+        font-size: 4em;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
+    .info {
+      width: 55%;
+    }
   }
 }
