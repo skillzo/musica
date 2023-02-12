@@ -5,7 +5,7 @@ import { BsHeart } from "react-icons/bs";
 
 export default function AlbumCardLg() {
   return (
-    <div className="p-[1em] flex justify-between items-center">
+    <div className="p-[1em] hover:bg-ash-black active:bg-black  rounded-lg flex justify-between items-center">
       <div className="flex items-center w-[70%] space-x-4">
         <Image
           className=" rounded-2xl object-cover h-[70px] w-[70px] "

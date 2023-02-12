@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <div className={styles["header-text"]}>
-        <p>Current playlist</p>
+        <p className="text-[#ffffffcc]">Current playlist</p>
         <div className={styles["header-text__main"]}>
           <div>
             <h1>R & B Hits</h1>

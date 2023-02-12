@@ -5,7 +5,7 @@ import { BsHeart } from "react-icons/bs";
 
 export default function AlbumCard() {
   return (
-    <div className=" bg-[#242829] opacity-90 p-[1em] rounded-lg  relative w-[350px] md:w-[300px]">
+    <div className=" bg-[#242829]  active:bg-black opacity-90 p-[1em] rounded-lg  relative w-[350px] md:w-[300px]">
       <div className="absolute border border-[#ffffff41] p-2 rounded-full top-2 right-2">
         <BsHeart color="#FACD66" />
       </div>
