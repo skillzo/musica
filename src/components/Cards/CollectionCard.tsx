@@ -3,7 +3,7 @@ import Image from "next/image";
 import { BsPlayFill } from "react-icons/bs";
 
 interface CollectionCard {
-  bgimage: HTMLImageElement | string;
+  bgimage: any;
   playlistName: string;
   artistName: string;
   likes: string;
